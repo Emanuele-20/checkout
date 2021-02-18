@@ -13,7 +13,8 @@ class Shop{
     checkout(val){
         const valuesAccumulator =[]
         if(val === "AAA"){
-            return 130
+            const specialOffer1 =  130
+            valuesAccumulator.push(specialOffer1)
         } else if ((typeof val == 'number') || (val !== val.toUpperCase())){
             return -1
         } else {
@@ -21,11 +22,12 @@ class Shop{
                 let letter = val[i]
                 valuesAccumulator.push(this.value[letter])
             }
-            let result = valuesAccumulator.reduce(function(a,b){
-                return a + b;
-            } ,0)
-            return result
+           
         }
+        let result = valuesAccumulator.reduce(function(a,b){
+            return a + b;
+        } ,0)
+        return result
     };
 
 }
