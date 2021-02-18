@@ -4,8 +4,10 @@ class Shop{
     //     this.arg = arg
     // };
 
-    checkout(){
-        return (-1)
+    checkout(val){
+        if (!(val == val.toUpperCase())){
+            return -1
+        }
     }
 
 }
