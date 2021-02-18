@@ -15,6 +15,14 @@ describe("Supermarket Checkout", () => {
         expect(shop.checkout("aBc")).toBe(-1);
     });
 
-    
+    it('Returns -1 when "-B8x" is passed as argument', () => {
+        shop = new Shop
+        expect(shop.checkout("-B8x")).toBe(-1);
+    });
+
+    it('Returns -1 when an integer is passed as argument', () => {
+        shop = new Shop
+        expect(shop.checkout(18)).toBe(-1);
+    });
 
 });

@@ -1,14 +1,10 @@
 class Shop{
 
-    // constructor(){
-    //     this.arg = arg
-    // };
-
     checkout(val){
-        if (!(val == val.toUpperCase())){
+        if (  (typeof val == 'number') || (val !== val.toUpperCase())  ){
             return -1
         }
-    }
+    };
 
 }
 
