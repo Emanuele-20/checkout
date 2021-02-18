@@ -25,4 +25,14 @@ describe("Supermarket Checkout", () => {
         expect(shop.checkout(18)).toBe(-1);
     });
 
+    it('Returns 100 when an "AA" is passed as argument', () => {
+        shop = new Shop
+        expect(shop.checkout("AA")).toBe(100);
+    });
+
+    it('Returns 60 when an "BB" is passed as argument', () => {
+        shop = new Shop
+        expect(shop.checkout("BB")).toBe(60);
+    });
+
 });
