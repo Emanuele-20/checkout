@@ -35,4 +35,19 @@ describe("Supermarket Checkout", () => {
         expect(shop.checkout("BB")).toBe(60);
     });
 
+    it('Returns 20 when an "C" is passed as argument', () => {
+        shop = new Shop
+        expect(shop.checkout("C")).toBe(20);
+    });
+
+    it('Returns 100 when an "ABC" is passed as argument', () => {
+        shop = new Shop
+        expect(shop.checkout("ABC")).toBe(100);
+    });
+
+    it('Returns 130 when an "AAA" is passed as argument, Special Offer', () => {
+        shop = new Shop
+        expect(shop.checkout("ABC")).toBe(100);
+    });
+
 });
