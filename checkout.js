@@ -15,7 +15,10 @@ class Shop{
         if(val === "AAA"){
             const specialOffer1 =  130
             valuesAccumulator.push(specialOffer1)
-        } else if ((typeof val == 'number') || (val !== val.toUpperCase())){
+        } else if ((val === "BB")){
+            const specialOffer2 = 45
+            valuesAccumulator.push(specialOffer2)
+        }else if((typeof val == 'number') || (val !== val.toUpperCase())){
             return -1
         } else {
             for(let i = 0; i < val.length; i++){
