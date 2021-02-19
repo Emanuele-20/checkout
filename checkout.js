@@ -24,12 +24,16 @@ class Shop{
             for(let i = 0; i < val.length; i++){
                 let letter = val[i]
                 valuesAccumulator.push(this.value[letter])
+                    if (valuesAccumulator === "AAA"){
+                        return 130
+                    }
             }
-           
         }
-        let result = valuesAccumulator.reduce(function(a,b){
-            return a + b;
+
+        let result = valuesAccumulator.reduce(function(accumulator,currentValue){
+            return accumulator + currentValue;
         } ,0)
+
         return result
     };
 

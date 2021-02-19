@@ -1,14 +1,11 @@
 const Shop = require('./checkout')
 
-
-
 describe("Supermarket Checkout", () => {
     
     it('Returns a new instance of the Shop Class', () => {
         shop = new Shop
         expect(shop).toBeInstanceOf(Shop);
     });
-
 
     it('Returns -1 when "aBc" is passed as argument', () => {
         shop = new Shop
@@ -48,6 +45,7 @@ describe("Supermarket Checkout", () => {
 
 
 describe("Special Offerts", () => {
+    
     it('Returns 130 when an "AAA" is passed as argument, Special Offer', () => {
         shop = new Shop
         expect(shop.checkout("AAA")).toBe(130);

@@ -15,7 +15,6 @@ For example, item A might cost 50 pounds individually, but this week we have a s
 | B    | 30    | 2B for 45      |
 | C    | 20    |                |
 | D    | 15    |                |
-| :--: | :--:  |    :--:        |
 
 ### Notes:
 
