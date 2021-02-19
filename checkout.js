@@ -12,21 +12,18 @@ class Shop{
 
     checkout(val){
         const valuesAccumulator =[]
-        if(val === "AAA"){
+        if ((typeof val == 'number') || (val !== val.toUpperCase())){
+            return -1
+        } else if(val === "AAA"){
             const specialOffer1 =  130
             valuesAccumulator.push(specialOffer1)
         } else if ((val === "BB")){
             const specialOffer2 = 45
             valuesAccumulator.push(specialOffer2)
-        }else if((typeof val == 'number') || (val !== val.toUpperCase())){
-            return -1
         } else {
             for(let i = 0; i < val.length; i++){
                 let letter = val[i]
                 valuesAccumulator.push(this.value[letter])
-                    if (valuesAccumulator === "AAA"){
-                        return 130
-                    }
             }
         }
 
