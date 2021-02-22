@@ -52,9 +52,9 @@ describe("Special Offerts", () => {
     });
 
 
-    it('Returns 45 when an "BB" is passed as argument, Special Offer', () => {
+    it('Returns 45 when an "BBA" is passed as argument, Special Offer', () => {
         shop = new Shop
-        expect(shop.checkout("BB")).toBe(45);
+        expect(shop.checkout("BBA")).toBe(45);
     });
 
 });

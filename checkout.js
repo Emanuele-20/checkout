@@ -14,12 +14,10 @@ class Shop{
         const valuesAccumulator =[]
         if ((typeof val == 'number') || (val !== val.toUpperCase())){
             return -1
-        } else if(val === "AAA"){
-            const specialOffer1 =  130
-            valuesAccumulator.push(specialOffer1)
-        } else if ((val === "BB")){
-            const specialOffer2 = 45
-            valuesAccumulator.push(specialOffer2)
+        } else if((val.split('A').length-1) % 3 === 0 ){
+            valuesAccumulator.push(130)
+        } else if ((val.split('B').length-1) % 2 === 0){
+            valuesAccumulator.push(45)
         } else {
             for(let i = 0; i < val.length; i++){
                 let letter = val[i]
@@ -27,9 +25,11 @@ class Shop{
             }
         }
 
+        
+
         let result = valuesAccumulator.reduce(function(accumulator,currentValue){
             return accumulator + currentValue;
-        } ,0)
+        } )
 
         return result
     };
