@@ -11,25 +11,26 @@ class Shop{
 
 
     checkout(val){
-        const valuesAccumulator =[]
+        const valuesAccumulator = []
+        
         if ((typeof val == 'number') || (val !== val.toUpperCase())){
             return -1
-        } else if((val.split('A').length-1) % 3 === 0 ){
+        } else if((val.match(/A/g).length) % 3 === 0 ){
             valuesAccumulator.push(130)
-        } else if ((val.split('B').length-1) % 2 === 0){
+        } else if (val.match(/B/g).length % 2 === 0 ){
             valuesAccumulator.push(45)
         } else {
             for(let i = 0; i < val.length; i++){
                 let letter = val[i]
                 valuesAccumulator.push(this.value[letter])
             }
-        }
+        }  
 
         
 
         let result = valuesAccumulator.reduce(function(accumulator,currentValue){
             return accumulator + currentValue;
-        } )
+        } , 0)
 
         return result
     };
