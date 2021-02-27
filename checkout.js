@@ -33,7 +33,7 @@ class Shop{
             return -1
         } 
         if(this.numbersOfAs(val) >= 3){   
-            array.push((Math.floor((this.numbersOfAs(val)/3)) * 130) + ((this.numbersOfAs(val) % 3) * 50 ))// how many extra As after a set of them
+            array.push((Math.floor((this.numbersOfAs(val)/3)) * 130) + ((this.numbersOfAs(val) % 3) * 50 ))
         } else if (this.numbersOfBs(val) >= 2){
             array.push((Math.floor((this.numbersOfBs(val)/2)) * 45) + ((this.numbersOfBs(val) %2) * 30))
         } else {
