@@ -1,17 +1,28 @@
-I want to take into account any amount of As and Bs
+## Analysis
 
-1. count how many As I have
-2. see the result of that_count divided by 3, and what is the remainder
-3. Thus, multiply the number of sets of three As by the discounted 
-   price and add the cost of one (module)
+To correctly approach this exercise we have to:
 
-To check how many times a set of 3 As appears, you could divide the number of As by 3
+1. Not allowed to pass an invalid input
+2. Count and sum each element's value
+3. Implement the special offer
 
-let numberOfAs = val.match(/A/g).length
-let numbersOfBs = val.match(/B/g).length
+## Steps to solve the special offer scenario
 
-let setOf3As = numberOfAs / 3
-let setOf2Bs = numbersOfBs / 2
+We want take any amount of As or Bs and apply the special offer.
+* We must count how many As are in the value and see the result of that 
+   count divided by 3:
+   * string.match(/A/g).length   --> NUMBER OF As PRESENT 
+   * (NUMBER OF As) / 3  --> SET OF 3 As
 
-let extraAsAfterAset = numberOfAs % 3
-let extraBsAfterASet = numbersOfBs % 2
+* Check what is the remainder:
+
+   * (NUMBER OF As) % 3 --> NUMBER OF EXTRA As AFTER A SET OF 3 
+
+* Multyply the number of sets of three As by the discounted price and add 
+   the cost of one A
+   * ((SET OF 3 As) * DISCOUNTED SET PRICE) + ((NUMBER OF EXTRA As) + SINGLE As PRICE)
+
+* Apply it on the Bs special offer too.
+
+
+Special thank you to my Makers Coach  - Eóin Power to guide me.
