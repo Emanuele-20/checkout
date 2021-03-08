@@ -13,15 +13,17 @@ class Shop{
         const numbOfAs = par.match(/A/g)
         if(numbOfAs === null){
             return 0
-        } 
+        } else {
         return numbOfAs.length
+        }
     }
     numbersOfBs(par){
         const numbOfBs = par.match(/B/g)
         if(numbOfBs === null){
             return 0
+        } else {
+            return numbOfBs.length
         }
-        return numbOfBs.length
     }
 
 
