@@ -24,6 +24,10 @@ describe("Checkout" , () => {
     test("Return 115 if 'ABCD' is passed", () => {
         expect(shop.checkout("ABCD")).toEqual(115)
     })
+
+    test("Return 150 if 'ABCA' is passed", () => {
+        expect(shop.checkout("ABCA")).toEqual(150)
+    })
 })
 
 describe("Special Offer", () => {

@@ -27,24 +27,23 @@ class Shop{
 
     checkout(val){
 
-        let array = []
+        let valuesContainer = []
 
         if((typeof val === 'number') || (typeof val !== 'string') || (val !== val.toUpperCase())){
             return -1
         } 
         if(this.numbersOfAs(val) >= 3){   
-            array.push((Math.floor((this.numbersOfAs(val)/3)) * 130) + ((this.numbersOfAs(val) % 3) * 50 ))
+            valuesContainer.push((Math.floor((this.numbersOfAs(val)/3)) * 130) + ((this.numbersOfAs(val) % 3) * 50 ))
         } else if (this.numbersOfBs(val) >= 2){
-            array.push((Math.floor((this.numbersOfBs(val)/2)) * 45) + ((this.numbersOfBs(val) %2) * 30))
+            valuesContainer.push((Math.floor((this.numbersOfBs(val)/2)) * 45) + ((this.numbersOfBs(val) %2) * 30))
         } else {
             for(let i = 0; i < val.length; i++){
                 let letter = val[i]
-                array.push(this.value[letter])
+                valuesContainer.push(this.value[letter])
             }
         }
         
-        let result = array.reduce((a, b) => a + b, 0)
-        console.log(result)
+        let result = valuesContainer.reduce((a, b) => a + b, 0)
         return result
         
     }
